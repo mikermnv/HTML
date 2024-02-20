@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>page4</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 2px solid black;
+            padding: 4px;
+            text-align: center;
+        }
+
+        td:nth-child(3) {
+            background-color: aqua;
+        }
+        caption {
+            font-size: 24px;
+            text-align: center;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <table align="center">
+        <caption>Информационная таблица(счёт)</caption>
+        <tr>
+            <th>Тип счета</th>
+            <th>Стоимость открытия</th>
+            <th>Максимальное количество одновременно открытых счетов данного типа</th>
+        </tr>
+        <tr>
+            <td>Текущий</td>
+            <td>-</td>
+            <td>20</td>
+        </tr>
+        <tr>
+            <td>Накопительный</td>
+            <td rowspan="2">1000$</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>Депозитный</td>
+            <td style="background-color: aqua;">10</td>
+        </tr>
+        <tr>
+            <td>Обезличенный металлический счет (ОМС)</td>
+            <td>500$</td>
+            <td>20</td>
+        </tr>
+    </table>
+</body>
+</html>
