@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Игровая комната в торговом центре</title>
+  <style>
+    .custom-btn {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+      margin: 10px;
+      border-radius: 5px;
+      outline: none;
+    }
+
+    .custom-btn:hover {
+      background-color: #45a049;
+    }
+
+    .custom-btn:active {
+      background-color: #336938;
+    }
+
+    .custom-btn:focus {
+      box-shadow: 0 0 0 2px #030303;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <input class="custom-btn" onclick="addInfo();" type="button" value="Ввод информации о комнате">
+    <input class="custom-btn" onclick="deleteInfo();" type="button" value="Удаление информации о комнате">
+    <input class="custom-btn" onclick="getInfo();" type="button" value="Получение информации о комнате">
+    <input class="custom-btn" onclick="listValues();" type="button" value="Перечень всех комнат">
+    <input class="custom-btn" onclick="resetInfo();" type="button" value="Очистить информацию в хранилище">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
