@@ -1,0 +1,40 @@
+  #title-cell {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 20px;
+    border-top-left-radius: 10px;
+    font-size: 25px;
+  }
+
+  #description-cell {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 20px;
+    border-top-right-radius: 10px;
+    font-size: 25px;
+  }  
+
+  .table tbody td {
+    padding: 20px;
+    border-bottom: none;
+    border-right: none;
+    border-left: none;
+  }
+  
+  .table tbody tr:not(:last-child) td {
+    border-bottom: 1px solid #f1f1f1;
+    border-right: 1px solid #f1f1f1;
+    border-left: 1px solid #f1f1f1;
+    padding: 20px;
+  }
+  
+  .table tbody tr:last-child td {
+    border-bottom: 1px solid #f1f1f1;
+    border-right: 1px solid #f1f1f1;
+    border-left: 1px solid #f1f1f1;
+    border-bottom: 1px solid #f1f1f1;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }

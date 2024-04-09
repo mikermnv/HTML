@@ -52,7 +52,7 @@ function LoadGameData() {
 
 function DataLoaded(gameData)
 {
-  var tableHTML = "<table><thead><tr><th>Title</th><th>Description</th></tr></thead><tbody>";
+  var tableHTML = "<table class='table'><thead><tr><th id='title-cell'>Title</th><th id='description-cell'>Description</th></tr></thead><tbody>";
   for (var gameName in gameData) {
     if (gameData.hasOwnProperty(gameName)) {
       tableHTML += "<tr><td>" + gameName + "</td><td>" + gameData[gameName] + "</td></tr>";
