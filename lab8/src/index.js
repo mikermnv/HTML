@@ -8,15 +8,15 @@ const dataContainer = document.getElementById('dataContainer');
 
 fromEvent(showDataButton, 'click').pipe(
   switchMap(() => ajax.getJSON('http://localhost:3000/download/game.json')),
-  map(gameData => {
-    var tableHTML = "<table class='table'><thead><tr><th id='title-cell'>Title</th><th id='description-cell'>Description</th></tr></thead><tbody>";
-    for (const [title, description] of Object.entries(gameData)) {
-      tableHTML += `<tr><td>${title}</td><td>${description}</td></tr>`;
-    }  
-    tableHTML += "</tbody></table>";   
+  map(gameData => Object.entries(gameData)),
+  map(gameEntries => {
+    const tableRows = gameEntries.map(([title, description]) => `<tr><td>${title}</td><td>${description}</td></tr>`);
+    const tableHTML = `<table class='table'><thead><tr><th id='title-cell'>Title</th><th id='description-cell'>Description</th></tr></thead><tbody>${tableRows.join('')}</tbody></table>`;
     return tableHTML;
   })
-).subscribe(tableHTML => dataContainer.innerHTML = tableHTML);
+).subscribe(tableHTML => {
+  dataContainer.innerHTML = tableHTML;
+});
 
 fromEvent(deleteDataButton, 'click').subscribe(() => {
   const table = dataContainer.getElementsByClassName('table')[0];
